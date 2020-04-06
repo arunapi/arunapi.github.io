@@ -1,1 +1,37 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[My Blog]]></title><description><![CDATA[My Blog.]]></description><link>https://arunapi.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 29 Mar 2020 05:46:06 GMT</lastBuildDate><item><title><![CDATA[Frequently used docker commands]]></title><description><![CDATA[Here are the list of docker commands that will be handy.]]></description><link>https://arunapi.github.io/docker-commands/</link><guid isPermaLink="false">https://arunapi.github.io/docker-commands/</guid><pubDate>Sun, 29 Mar 2020 01:35:03 GMT</pubDate><content:encoded>&lt;p&gt;Here are the list of docker commands that will be handy.&lt;/p&gt;</content:encoded></item></channel></rss>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[My Blog]]></title><description><![CDATA[My Blog.]]></description><link>https://arunapi.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 06 Apr 2020 23:49:02 GMT</lastBuildDate><item><title><![CDATA[Using Jenv]]></title><description><![CDATA[Jenv is a command line tool, which you can use to conviniently switch between various version of java. I have used this to check if my Java…]]></description><link>https://arunapi.github.io/using-jenv/</link><guid isPermaLink="false">https://arunapi.github.io/using-jenv/</guid><pubDate>Mon, 06 Apr 2020 19:46:03 GMT</pubDate><content:encoded>&lt;p&gt;Jenv is a command line tool, which you can use to conviniently switch between various version of java. I have used this to check if my Java 8 code base will it work on Java 13.&lt;/p&gt;
+&lt;p&gt;Basic installation steps are provided here &lt;a href=&quot;https://www.jenv.be/&quot;&gt;https://www.jenv.be/&lt;/a&gt;
+Checkout the additional configurations here &lt;a href=&quot;https://github.com/jenv/jenv&quot;&gt;https://github.com/jenv/jenv&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;At a high level these are the steps to follow.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Run &lt;code class=&quot;language-text&quot;&gt;git clone https://github.com/gcuisinier/jenv.git ~/.jenv&lt;/code&gt; to install &lt;a href=&quot;http://www.jenv.be/&quot;&gt;jenv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Run &lt;code class=&quot;language-text&quot;&gt;echo &amp;#39;export PATH=&amp;quot;$HOME/.jenv/bin:$PATH&amp;quot;&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile&lt;/code&gt; to add the jenv bin dir to your path.&lt;/li&gt;
+&lt;li&gt;Run &lt;code class=&quot;language-text&quot;&gt;echo &amp;#39;eval &amp;quot;$(jenv init -)&amp;quot;&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile&lt;/code&gt; to initialize jenv on startup&lt;/li&gt;
+&lt;li&gt;Run &lt;code class=&quot;language-text&quot;&gt;mkdir -p ~/.jenv/versions&lt;/code&gt; to create jenv’s home dirs (since it doesn’t do it automatically, for some reason)&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run &lt;code class=&quot;language-text&quot;&gt;jenv add /Library/Java/JavaVirtualMachines/openjdk-11.0.2.jdk/Contents/Home&lt;/code&gt; to add the JDK you installed earlier to jenv&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; This might not be the &lt;em&gt;exact&lt;/em&gt; path of your JDK.&lt;/li&gt;
+&lt;li&gt;You can use autocomplete to get to the correct dir&lt;/li&gt;
+&lt;li&gt;Just start with &lt;code class=&quot;language-text&quot;&gt;/Library/Java/JavaVirtualMachines&lt;/code&gt; and start tabbing&lt;/li&gt;
+&lt;li&gt;Make sure your dir ends with &lt;code class=&quot;language-text&quot;&gt;Contents/Home&lt;/code&gt; if you are on Mac OS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run &lt;code class=&quot;language-text&quot;&gt;jenv global openjdk-11.0.2.jdk&lt;/code&gt; to configure your global jdk version&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; Might not be the exact version. Check the output of your &lt;code class=&quot;language-text&quot;&gt;jenv versions&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run &lt;code class=&quot;language-text&quot;&gt;jenv enable-plugin export&lt;/code&gt; to allow jenv to set your $JAVA_HOME, then create a new terminal session&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; If you recieve a plugin error, use the command &lt;code class=&quot;language-text&quot;&gt;source ~/.bash_profile&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Frequently used docker commands]]></title><description><![CDATA[Here are the list of docker commands that will be handy.]]></description><link>https://arunapi.github.io/docker-commands/</link><guid isPermaLink="false">https://arunapi.github.io/docker-commands/</guid><pubDate>Sun, 29 Mar 2020 01:35:03 GMT</pubDate><content:encoded>&lt;p&gt;Here are the list of docker commands that will be handy.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Using Docker for Java Programs]]></title><description><![CDATA[Many times you want to quickly test out a java code in a particular version of Java.
+One fine way of doing it in local is using jenv. But…]]></description><link>https://arunapi.github.io/using-docker-to-test-java/</link><guid isPermaLink="false">https://arunapi.github.io/using-docker-to-test-java/</guid><pubDate>Sun, 29 Mar 2020 01:35:03 GMT</pubDate><content:encoded>&lt;p&gt;Many times you want to quickly test out a java code in a particular version of Java.
+One fine way of doing it in local is using jenv. But still you are testing from your operating system. How will I test for a different OS. I use docker to accompilsh this.&lt;/p&gt;
+&lt;p&gt;Here is a simple example.&lt;/p&gt;
+&lt;p&gt;mkdir my-java-app&lt;/p&gt;
+&lt;p&gt;Sample.java&lt;/p&gt;
+&lt;p&gt;Dockerfile&lt;/p&gt;</content:encoded></item></channel></rss>
