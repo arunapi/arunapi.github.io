@@ -1,12 +1,119 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[My Blog]]></title><description><![CDATA[My Blog.]]></description><link>https://arunapi.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 06 Apr 2020 23:49:02 GMT</lastBuildDate><item><title><![CDATA[Using Jenv]]></title><description><![CDATA[Jenv is a command line tool, which you can use to conviniently switch between various version of java. I have used this to check if my Java…]]></description><link>https://arunapi.github.io/using-jenv/</link><guid isPermaLink="false">https://arunapi.github.io/using-jenv/</guid><pubDate>Mon, 06 Apr 2020 19:46:03 GMT</pubDate><content:encoded>&lt;p&gt;Jenv is a command line tool, which you can use to conviniently switch between various version of java. I have used this to check if my Java 8 code base will it work on Java 13.&lt;/p&gt;
-&lt;p&gt;Basic installation steps are provided here &lt;a href=&quot;https://www.jenv.be/&quot;&gt;https://www.jenv.be/&lt;/a&gt;
-Checkout the additional configurations here &lt;a href=&quot;https://github.com/jenv/jenv&quot;&gt;https://github.com/jenv/jenv&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[My Blog]]></title><description><![CDATA[My Blog.]]></description><link>https://arunapi.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 02 May 2020 12:18:28 GMT</lastBuildDate><item><title><![CDATA[Webpack Core Concepts]]></title><description><![CDATA[Webpack is a module bundler that allows developers to write in any module format and compiles them into a artifacts that can be used in a…]]></description><link>https://arunapi.github.io/webpack-core-concepts/</link><guid isPermaLink="false">https://arunapi.github.io/webpack-core-concepts/</guid><pubDate>Sat, 02 May 2020 07:20:03 GMT</pubDate><content:encoded>&lt;p&gt;Webpack is a module bundler that allows developers to write in any module format and compiles them into a artifacts that can be used in a browser.
+Webpack supports static async bundling (code splitting) helps to optimize the code at build time for high performance.&lt;/p&gt;
+&lt;p&gt;Github Link: &lt;a href=&quot;https://github.com/webpack/webpack&quot;&gt;https://github.com/webpack/webpack&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://webpack.js.org/&quot;&gt;https://webpack.js.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Before explaining the core concepts, it’s important to understand how webpack can be used.
+There are 3 ways to use webpack&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Webpack Config (webpack.config.js)
+The config file is a CommonJS module.&lt;/li&gt;
+&lt;li&gt;Webpack CLI.
+&lt;code class=&quot;language-text&quot;&gt;webpack &amp;lt;entry.js&amp;gt; &amp;lt;output.js&amp;gt; --colors --progress&lt;/code&gt;
+&lt;code class=&quot;language-text&quot;&gt;webpack-dev-server --port=9000&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Node API&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;    var webpack = require(&amp;quot;webpack&amp;quot;);
+
+    webpack({
+        //configuration object
+    }, function(error, status){
+        //compiler callbacks
+    })&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Here are the 4 core concepts in webpack.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Entry.
+This is the top level application file, from which weback creates the source map.
+Your application file may import other components such as other modules, sass, css, images.
+Webpack trace through them and create a source map.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;    module.exports = {
+        entry: &amp;#39;./index.js&amp;#39;, //relative path
+    }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Output.
+This object tells webpack how to distribute the files after compilation.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;    module.exports = {
+        entry: &amp;#39;./index.js&amp;#39;, //relative path
+        output: { //compilations, how to distribute
+            path: &amp;#39;./dist&amp;#39;,
+            filename: &amp;#39;./bundle.js&amp;#39;
+        }
+    }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Loaders.
+Tells webpack how to modify files before its added to dependency graph.
+Loaders are also JS modules(functions) that takes the source files and returns it in a [modified] state
+Tells webpack how to interpret and tranlate files. per fiile basis.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;    module: {
+    rules: [
+    {test: /\.ts\$/, use: &amp;#39;ts-loader&amp;#39;}, //matches the regex - which file to run the loader against
+
+            {test: /\.js$/, use: &amp;#39;babel-loader&amp;#39;},
+
+            {
+                test: /\.css$/, use: &amp;#39;css-loader&amp;#39;,
+                use: (Array|String|Function), // that returns loader objects
+                include: RegExp[],
+                exclude: RegExp[], //ignore file .. say for eg: spec files in prod build
+                issuer: (RegExp| String)[],
+                enforce: &amp;quot;pre&amp;quot;|&amp;quot;post&amp;quot; // tells webpack when to run the rule, before or after all othe rules
+                oneof or anyof to ensure only one gets applied, by default all rules are matched
+            }
+            {
+                test: /\.css$/, use: &amp;#39;css-loader&amp;#39;,
+                use: [&amp;#39;style&amp;#39;,&amp;#39;css&amp;#39;,&amp;#39;less&amp;#39;]  //chaining loaders. read it like style(css(less())), which means executed from right to left
+            }
+
+        ],
+    }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;Plugins&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;A plugin is an instance(ES5 class) or object with &lt;code class=&quot;language-text&quot;&gt;apply&lt;/code&gt; property.
+It allows you to hook into the entire compilation lifecycle
+Webpack has a varitey of built in plugins.
+Compiler emit events and plugins are used to add additional functionality to compilations(optimized bundled modules),
+which loaders can’t do.
+Plugns are the powerful feature of webpack with access to Compiler API. It does everything else you’d ever want to in webpack.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;        function BellOnBundlerErrorPlugin(){}
+        BellOnBundlerErrorPlugin.prototype.apply = function(compiler){
+            if(typeof(process) !== &amp;#39;undefined&amp;#39;){
+                compiler.plugin(&amp;#39;done&amp;#39;, function(stats){
+                    if(stats.hasErrors()){
+                        process.stderr.write(&amp;#39;\x07&amp;#39;);
+                    }
+                });
+                compiler.plugin(&amp;#39;failed&amp;#39;, function(err){
+                    process.stderr.write(&amp;#39;\x07&amp;#39;);
+                });
+            }
+        }
+        module.exports = BellOnBundlerErrorPlugin;
+
+         //require() from node_modules or webpack or local file
+         var BellOnBundlerErrorPlugin = require(&amp;#39;bell-on-error&amp;#39;)
+         var webpack = require(&amp;#39;webpack&amp;#39;);
+
+         module.exports = {
+             plugins: [
+                new BellOnBundlerErrorPlugin(), //add new instance of the plugin into plugins key in config object
+                                                // provide additional info for arguments
+                new webpack.optimize.CommonsChunkPlugin(&amp;#39;vendors&amp;#39;)
+             ]
+         }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Webpack follows an event driven architecture and by itself is build using plugins&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Using Jenv]]></title><description><![CDATA[Jenv is a command line tool, which you can use to conviniently switch between various version of java. I have used this to check if my Java…]]></description><link>https://arunapi.github.io/using-jenv/</link><guid isPermaLink="false">https://arunapi.github.io/using-jenv/</guid><pubDate>Mon, 06 Apr 2020 19:46:03 GMT</pubDate><content:encoded>&lt;p&gt;Jenv is a command line tool, which you can use to conviniently switch between various version of java. I have used this to check if my Java 8 code base will it work on Java 11.&lt;/p&gt;
+&lt;p&gt;Basic installation steps are provided [here] &lt;a href=&quot;https://www.jenv.be/&quot;&gt;https://www.jenv.be/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Checkout the additional configurations here &lt;a href=&quot;https://github.com/jenv/jenv&quot;&gt;https://github.com/jenv/jenv&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;At a high level these are the steps to follow.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Run &lt;code class=&quot;language-text&quot;&gt;git clone https://github.com/gcuisinier/jenv.git ~/.jenv&lt;/code&gt; to install &lt;a href=&quot;http://www.jenv.be/&quot;&gt;jenv&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Run &lt;code class=&quot;language-text&quot;&gt;echo &amp;#39;export PATH=&amp;quot;$HOME/.jenv/bin:$PATH&amp;quot;&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile&lt;/code&gt; to add the jenv bin dir to your path.&lt;/li&gt;
 &lt;li&gt;Run &lt;code class=&quot;language-text&quot;&gt;echo &amp;#39;eval &amp;quot;$(jenv init -)&amp;quot;&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile&lt;/code&gt; to initialize jenv on startup&lt;/li&gt;
-&lt;li&gt;Run &lt;code class=&quot;language-text&quot;&gt;mkdir -p ~/.jenv/versions&lt;/code&gt; to create jenv’s home dirs (since it doesn’t do it automatically, for some reason)&lt;/li&gt;
+&lt;li&gt;Run &lt;code class=&quot;language-text&quot;&gt;mkdir -p ~/.jenv/versions&lt;/code&gt; to create jenv’s home dirs (since it doesn’t do it automatically)&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Run &lt;code class=&quot;language-text&quot;&gt;jenv add /Library/Java/JavaVirtualMachines/openjdk-11.0.2.jdk/Contents/Home&lt;/code&gt; to add the JDK you installed earlier to jenv&lt;/p&gt;
 &lt;ul&gt;
