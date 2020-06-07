@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[My Blog]]></title><description><![CDATA[My Blog.]]></description><link>https://arunapi.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 07 Jun 2020 03:38:00 GMT</lastBuildDate><item><title><![CDATA[Learning Java Script from Java Point of View]]></title><description><![CDATA[Writing a program Let’s write a simple java program Math.java Writing the same program in javascript Math.js Executing the program To…]]></description><link>https://arunapi.github.io/java-script-from-java-pov/</link><guid isPermaLink="false">https://arunapi.github.io/java-script-from-java-pov/</guid><pubDate>Sat, 06 Jun 2020 21:46:03 GMT</pubDate><content:encoded>&lt;h3&gt;Writing a program&lt;/h3&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[My Blog]]></title><description><![CDATA[My Blog.]]></description><link>https://arunapi.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 07 Jun 2020 03:45:18 GMT</lastBuildDate><item><title><![CDATA[Learning Java Script from Java Point of View]]></title><description><![CDATA[Writing a program Let’s write a simple java program Math.java Writing the same program in javascript Math.js Executing the program To…]]></description><link>https://arunapi.github.io/java-script-from-java-pov/</link><guid isPermaLink="false">https://arunapi.github.io/java-script-from-java-pov/</guid><pubDate>Sat, 06 Jun 2020 21:46:03 GMT</pubDate><content:encoded>&lt;h3&gt;Writing a program&lt;/h3&gt;
 &lt;p&gt;Let’s write a simple java program&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Math.java&lt;/em&gt;&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -51,7 +51,7 @@ Please read the above statement with a grain of salt. There are other ways of ex
 &lt;/ul&gt;
 &lt;h3&gt;Writing a more complex program&lt;/h3&gt;
 &lt;h4&gt;Create a Java project using maven&lt;/h4&gt;
-&lt;h4&gt;Create a Java script project using npm&lt;/h4&gt;</content:encoded></item><item><title><![CDATA[Webpack Core Concepts]]></title><description><![CDATA[Webpack is a module bundler that allows developers to write in any module format and compiles them into a artifacts that can be used in a…]]></description><link>https://arunapi.github.io/webpack-core-concepts/</link><guid isPermaLink="false">https://arunapi.github.io/webpack-core-concepts/</guid><pubDate>Sat, 02 May 2020 07:20:03 GMT</pubDate><content:encoded>&lt;p&gt;Webpack is a module bundler that allows developers to write in any module format and compiles them into a artifacts that can be used in a browser.
+&lt;h4&gt;Create a Java script project using npm&lt;/h4&gt;</content:encoded></item><item><title><![CDATA[Google Cloud Platform]]></title><description><![CDATA[Projects]]></description><link>https://arunapi.github.io/google-cloud-platform/</link><guid isPermaLink="false">https://arunapi.github.io/google-cloud-platform/</guid><pubDate>Mon, 04 May 2020 19:46:03 GMT</pubDate><content:encoded>&lt;h1&gt;Projects&lt;/h1&gt;</content:encoded></item><item><title><![CDATA[Webpack Core Concepts]]></title><description><![CDATA[Webpack is a module bundler that allows developers to write in any module format and compiles them into a artifacts that can be used in a…]]></description><link>https://arunapi.github.io/webpack-core-concepts/</link><guid isPermaLink="false">https://arunapi.github.io/webpack-core-concepts/</guid><pubDate>Sat, 02 May 2020 07:20:03 GMT</pubDate><content:encoded>&lt;p&gt;Webpack is a module bundler that allows developers to write in any module format and compiles them into a artifacts that can be used in a browser.
 Webpack supports static async bundling (code splitting) helps to optimize the code at build time for high performance.&lt;/p&gt;
 &lt;p&gt;Github Link: &lt;a href=&quot;https://github.com/webpack/webpack&quot;&gt;https://github.com/webpack/webpack&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://webpack.js.org/&quot;&gt;https://webpack.js.org/&lt;/a&gt;&lt;/p&gt;
@@ -158,37 +158,7 @@ Plugns are the powerful feature of webpack with access to Compiler API. It does 
                 new webpack.optimize.CommonsChunkPlugin(&amp;#39;vendors&amp;#39;)
              ]
          }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Webpack follows an event driven architecture and by itself is build using plugins&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Using Jenv]]></title><description><![CDATA[Jenv is a command line tool, which you can use to conviniently switch between various version of java. I have used this to check if my Java…]]></description><link>https://arunapi.github.io/google-cloud-platform/</link><guid isPermaLink="false">https://arunapi.github.io/google-cloud-platform/</guid><pubDate>Mon, 06 Apr 2020 19:46:03 GMT</pubDate><content:encoded>&lt;p&gt;Jenv is a command line tool, which you can use to conviniently switch between various version of java. I have used this to check if my Java 8 code base will it work on Java 11.&lt;/p&gt;
-&lt;p&gt;Basic installation steps are provided [here] &lt;a href=&quot;https://www.jenv.be/&quot;&gt;https://www.jenv.be/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Checkout the additional configurations here &lt;a href=&quot;https://github.com/jenv/jenv&quot;&gt;https://github.com/jenv/jenv&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;At a high level these are the steps to follow.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Run &lt;code class=&quot;language-text&quot;&gt;git clone https://github.com/gcuisinier/jenv.git ~/.jenv&lt;/code&gt; to install &lt;a href=&quot;http://www.jenv.be/&quot;&gt;jenv&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Run &lt;code class=&quot;language-text&quot;&gt;echo &amp;#39;export PATH=&amp;quot;$HOME/.jenv/bin:$PATH&amp;quot;&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile&lt;/code&gt; to add the jenv bin dir to your path.&lt;/li&gt;
-&lt;li&gt;Run &lt;code class=&quot;language-text&quot;&gt;echo &amp;#39;eval &amp;quot;$(jenv init -)&amp;quot;&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile&lt;/code&gt; to initialize jenv on startup&lt;/li&gt;
-&lt;li&gt;Run &lt;code class=&quot;language-text&quot;&gt;mkdir -p ~/.jenv/versions&lt;/code&gt; to create jenv’s home dirs (since it doesn’t do it automatically)&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Run &lt;code class=&quot;language-text&quot;&gt;jenv add /Library/Java/JavaVirtualMachines/openjdk-11.0.2.jdk/Contents/Home&lt;/code&gt; to add the JDK you installed earlier to jenv&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; This might not be the &lt;em&gt;exact&lt;/em&gt; path of your JDK.&lt;/li&gt;
-&lt;li&gt;You can use autocomplete to get to the correct dir&lt;/li&gt;
-&lt;li&gt;Just start with &lt;code class=&quot;language-text&quot;&gt;/Library/Java/JavaVirtualMachines&lt;/code&gt; and start tabbing&lt;/li&gt;
-&lt;li&gt;Make sure your dir ends with &lt;code class=&quot;language-text&quot;&gt;Contents/Home&lt;/code&gt; if you are on Mac OS&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Run &lt;code class=&quot;language-text&quot;&gt;jenv global openjdk-11.0.2.jdk&lt;/code&gt; to configure your global jdk version&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; Might not be the exact version. Check the output of your &lt;code class=&quot;language-text&quot;&gt;jenv versions&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Run &lt;code class=&quot;language-text&quot;&gt;jenv enable-plugin export&lt;/code&gt; to allow jenv to set your $JAVA_HOME, then create a new terminal session&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; If you recieve a plugin error, use the command &lt;code class=&quot;language-text&quot;&gt;source ~/.bash_profile&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Using Jenv]]></title><description><![CDATA[Jenv is a command line tool, which you can use to conviniently switch between various version of java. I have used this to check if my Java…]]></description><link>https://arunapi.github.io/using-jenv/</link><guid isPermaLink="false">https://arunapi.github.io/using-jenv/</guid><pubDate>Mon, 06 Apr 2020 19:46:03 GMT</pubDate><content:encoded>&lt;p&gt;Jenv is a command line tool, which you can use to conviniently switch between various version of java. I have used this to check if my Java 8 code base will it work on Java 11.&lt;/p&gt;
+&lt;p&gt;Webpack follows an event driven architecture and by itself is build using plugins&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Using Jenv]]></title><description><![CDATA[Jenv is a command line tool, which you can use to conviniently switch between various version of java. I have used this to check if my Java…]]></description><link>https://arunapi.github.io/using-jenv/</link><guid isPermaLink="false">https://arunapi.github.io/using-jenv/</guid><pubDate>Mon, 06 Apr 2020 19:46:03 GMT</pubDate><content:encoded>&lt;p&gt;Jenv is a command line tool, which you can use to conviniently switch between various version of java. I have used this to check if my Java 8 code base will it work on Java 11.&lt;/p&gt;
 &lt;p&gt;Basic installation steps are provided [here] &lt;a href=&quot;https://www.jenv.be/&quot;&gt;https://www.jenv.be/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Checkout the additional configurations here &lt;a href=&quot;https://github.com/jenv/jenv&quot;&gt;https://github.com/jenv/jenv&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;At a high level these are the steps to follow to setup for the first time. If you already have it setup jump to switching versions section.&lt;/p&gt;
